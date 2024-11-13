@@ -95,7 +95,7 @@ function App() {
       <div className='content-main p-8 flex flex-col w-[70vw] h-[80vh] max-w-[70vw] max-h-[80vh]'>
         <div>
           <img src={grava2x} alt="logo" className='w-40 m-auto' />
-          <h1 className='font-bold text-white text-center text-gray-800 text-4xl'>Sorteador de times</h1>
+          <h1 className='font-bold text-center text-gray-800 text-4xl'>Sorteador de times</h1>
           <input
             className='rounded w-full min-h- text-center align-middle p-4 mt-6 hover:border-y-neutral-50'
             value={names}
