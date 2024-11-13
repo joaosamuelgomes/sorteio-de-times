@@ -92,29 +92,30 @@ function App() {
 
   return (
     <>
-      <div className='content-main p-8 flex flex-col w-[70vw] h-[80vh]'>
+      <div className='content-main p-8 flex flex-col w-[70vw] h-[80vh] max-w-[70vw] max-h-[80vh]'>
         <div>
           <img src={grava2x} alt="logo" className='w-40 m-auto' />
-          <h1 className='font-bold text-white text-center text-4xl'>Sorteador de times</h1>
+          <h1 className='font-bold text-white text-center text-gray-800 text-4xl'>Sorteador de times</h1>
           <input
-            className='rounded w-full text-center align-middle p-4 mt-6 hover:border-y-neutral-50'
+            className='rounded w-full min-h- text-center align-middle p-4 mt-6 hover:border-y-neutral-50'
             value={names}
             onChange={(e) => setNames(e.target.value)}
             placeholder="Digite os nomes separados por vírgula"
           />
-          <button
-            className='mt-4 align-middle justify-center w-full bg-blue-600 text-white p-2 rounded'
-            onClick={handleSortTeams}
-          >
-            Sortear
-          </button>
-
+          <div className='w-full flex mt-4 justify-center'>
+            <button 
+              type="button" 
+              onClick={handleSortTeams} 
+              class="text-white bg-gradient-to-r border-white border-x-2 from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center min-w-[20%]">
+                SORTEAR
+            </button>
+          </div>
           {error && <p className="text-red-600 text-center mt-4">{error}</p>}
         </div>
 
         <div className='mt-8 flex-grow'>
           {loading ? (
-            <div className="w-[40vw] m-auto mt-20 bg-gray-300 rounded-full h-4">
+            <div className="w-[40vw] m-auto mt-12 bg-gray-300 rounded-full h-4">
               <div
                 className="bg-blue-600 h-4 rounded-full"
                 style={{ width: `${progress}%` }}
@@ -122,22 +123,21 @@ function App() {
             </div>
           ) : sorted && (
             <>
-              <h2 className='text-center mt-12 text-2xl font-bold text-white'>ELITE</h2>
-              <p className='text-center text-white'>
+              <h2 className='text-center mt-4 text-2xl font-bold text-gray-800'>ELITE</h2>
+              <p className='text-center text-gray-800'>
                 {elite.join(', ')}
               </p>
 
-              <h2 className='text-center text-2xl font-bold text-white mt-4'>RESTO</h2>
-              <p className='text-center text-white'>
+              <h2 className='text-center text-2xl font-bold text-gray-800 mt-4'>RESTO</h2>
+              <p className='text-center text-gray-800'>
                 {resto.join(', ')}
               </p>
             </>
           )}
         </div>
 
-        <div className='flex flex-col'>
-          <p className='font-mono text-center'>feito por João Samuel ⚡</p>
-          <p className='text-center text-[0.5rem] opacity-50 font-thin mt-4'>sorteio (possivelmente) manipulado</p>
+        <div className='flex flex-col mt-6'>
+          <p className='font-mono text-center text-xs text-gray-950'>feito por João Samuel ⚡</p>
         </div>
       </div>
 

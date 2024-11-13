@@ -10,7 +10,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background: rgb(31,27,74);
-  background: linear-gradient(121deg, rgba(31,27,74,1) 30%, rgba(61,17,83,1) 70%);
+  background: linear-gradient(121deg, #3B6375 30%, #3B7075 70%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,9 +19,9 @@
 }
 
 .content-main{
-  background: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(7.6px);
   -webkit-backdrop-filter: blur(7.6px);
   border: 1px solid rgba(255, 255, 255, 1);
